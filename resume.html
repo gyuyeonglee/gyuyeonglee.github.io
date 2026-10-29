@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>이력서 — 이규영</title>
+<meta name="description" content="웹디자이너 이규영의 이력서. 디자인 1년 8개월, 웹·앱 개발, 파이썬 데스크톱 앱 6종." />
+<meta name="theme-color" content="#f3eee6" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<style>
+  .doc-body { background: var(--bg); }
+  .doc-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 22px 28px 0;
+  }
+  .doc-bar a,
+  .doc-bar button {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dim);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 9px 16px;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s, border-color 0.3s, background 0.3s;
+  }
+  .doc-bar a:hover,
+  .doc-bar button:hover {
+    color: var(--fg);
+    border-color: var(--fg);
+  }
+  .doc {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: clamp(34px, 5vw, 64px) 28px 90px;
+  }
+  .doc__head {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 26px;
+    align-items: end;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--fg);
+  }
+  .doc__name {
+    font-size: clamp(2.6rem, 6vw, 4.6rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    font-weight: 800;
+    margin: 14px 0 12px;
+  }
+  .doc__role {
+    font-size: 0.95rem;
+    color: var(--fg-2);
+    letter-spacing: -0.01em;
+  }
+  .doc__contact {
+    display: grid;
+    gap: 6px;
+    justify-items: end;
+    text-align: right;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.02em;
+    color: var(--fg-2);
+  }
+  .doc__contact a { border-bottom: 1px solid transparent; }
+  .doc__contact a:hover { border-bottom-color: var(--accent); }
+  .doc__section {
+    display: grid;
+    grid-template-columns: 130px minmax(0, 1fr);
+    gap: 26px;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .doc__section > h2 {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--dim);
+    padding-top: 5px;
+  }
+  .doc__section > h2 span { color: var(--accent); margin-right: 8px; }
+  .doc__body > p {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: var(--fg-2);
+    margin-bottom: 14px;
+  }
+  .doc__body > p:last-child { margin-bottom: 0; }
+  .entry {
+    display: grid;
+    grid-template-columns: 132px minmax(0, 1fr);
+    gap: 18px;
+    padding: 16px 0;
+    border-top: 1px solid var(--line-soft);
+  }
+  .entry:first-child { border-top: 0; padding-top: 0; }
+  .entry__when {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.04em;
+    color: var(--dim);
+    padding-top: 4px;
+    line-height: 1.7;
+  }
+  .entry h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 4px;
+  }
+  .entry h3 span {
+    font-weight: 400;
+    color: var(--dim);
+    font-size: 0.86rem;
+    margin-left: 6px;
+  }
+  .entry p {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--fg-2);
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .tags span {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--dim);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 4px 9px;
+  }
+  .spec {
+    display: grid;
+    grid-template-columns: 118px minmax(0, 1fr);
+    gap: 14px;
+    padding: 9px 0;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--fg-2);
+    border-top: 1px solid var(--line-soft);
+  }
+  .spec:first-of-type { border-top: 0; }
+  .spec dt {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--dim);
+    padding-top: 3px;
+  }
+  .spec dd { color: var(--fg-2); }
+  .doc__foot {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 34px;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+
+  @media (max-width: 720px) {
+    .doc__head { grid-template-columns: 1fr; align-items: start; }
+    .doc__contact { justify-items: start; text-align: left; }
+    .doc__section { grid-template-columns: 1fr; gap: 12px; }
+    .entry { grid-template-columns: 1fr; gap: 6px; }
+    .spec { grid-template-columns: 1fr; gap: 2px; }
+  }
+
+  @media print {
+    @page { size: A4; margin: 13mm 14mm; }
+    html, body { background: #fff !important; color: #000 !important; }
+    .doc-bar, .doc__foot, .grain { display: none !important; }
+    .doc { max-width: none; padding: 0; }
+    .doc__head, .doc__section { border-color: #bbb !important; }
+    .doc__name { font-size: 30pt; }
+    .doc__section { padding: 14px 0; break-inside: avoid; }
+    .doc__section > h2, .entry__when, .spec dt, .tags span { color: #555 !important; }
+    .doc__body > p, .entry p, .spec dd { color: #111 !important; }
+    .entry, .spec { break-inside: avoid; }
+    a { color: #000 !important; text-decoration: none; }
+    .tags span { border-color: #bbb !important; }
+  }
+</style>
+</head>
+<body class="paper doc-body">
+<div class="grain" aria-hidden="true"></div>
+
+<div class="doc-bar">
+  <a href="index.html">← 이규영 포트폴리오</a>
+  <button type="button" onclick="window.print()">인쇄 / PDF 저장</button>
+</div>
+
+<main class="doc">
+  <header class="doc__head">
+    <div>
+      <p class="mono">Resume — 2026</p>
+      <h1 class="doc__name">이규영</h1>
+      <p class="doc__role">웹디자이너 · 프론트엔드 · 파이썬 앱 개발</p>
+    </div>
+    <div class="doc__contact">
+      <a href="mailto:wlsduf631@gmail.com">wlsduf631@gmail.com</a>
+      <span>010-2011-2739</span>
+      <span>경기도 성남시</span>
+      <a href="https://github.com/gyuyeonglee" target="_blank" rel="noopener">github.com/gyuyeonglee</a>
+      <a href="https://blog.naver.com/lucid631" target="_blank" rel="noopener">blog.naver.com/lucid631</a>
+    </div>
+  </header>
+
+  <section class="doc__section">
+    <h2><span>01</span>소개</h2>
+    <div class="doc__body">
+      <p>
+        디자인과 개발을 함께 하는 웹디자이너입니다. 산업디자인 회사에서 제품 이미지와
+        인쇄물을 <strong>1년 8개월</strong>간 만들었고, 이후 웹·앱 개발 과정을 수료하며
+        HTML·CSS·JavaScript와 Java·Spring을 익혔습니다.
+      </p>
+      <p>
+        지금은 필요한 도구를 직접 만들어 쓰는 쪽으로, 파이썬 데스크톱 앱
+        <strong>6종</strong>과 웹앱 <strong>2종</strong>을 개발해 운영하고 있습니다.
+        화면을 예쁘게 만드는 일과 실제로 작동하게 만드는 일을 같은 무게로 생각합니다.
+      </p>
+    </div>
+  </section>
+
+  <section class="doc__section">
+    <h2><span>02</span>경력</h2>
+    <div class="doc__body">
+      <div class="entry">
+        <div class="entry__when">2021.11 — 2022.12<br />1년 2개월</div>
+        <div>
+          <h3>(주)엘제이인터내셔널 <span>온라인사업부 · 주임/계장</span></h3>
+          <p>
+            온라인 판매용 제품 이미지와 페이지 디자인을 담당했습니다. 제품 컷을 정리해
+            상세페이지와 홍보물로 만드는 일이 주된 업무였습니다.
+          </p>
+          <div class="tags">
+            <span>제품 디자인</span><span>상세페이지</span><span>Photoshop</span><span>Illustrator</span>
+          </div>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="entry__when">2019.12 — 2020.05<br />6개월</div>
+        <div>
+          <h3>아하스포츠코퍼레이션 <span>디자인부 · 사원</span></h3>
+          <p>
+            스포츠 제품의 디자인 실무를 담당했습니다. 제품 이미지 작업과 인쇄물 제작을
+            함께 진행했습니다.
+          </p>
+          <div class="tags">
+            <span>제품 디자인</span><span>인쇄물</span><span>2D 디자인</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc__section">
+    <h2><span>03</span>프로젝트</h2>
+    <div class="doc__body">
+      <div class="entry">
+        <div class="entry__when">2023.10 — 2024.04<br />팀 프로젝트</div>
+        <div>
+          <h3>이커머스 웹사이트 ‘해피핀핀’ <span>팀장 · UI/UX · 퍼블리싱</span></h3>
+          <p>
+            HTML·CSS·JavaScript로 상세페이지, 공지사항, FAQ, Q&amp;A 게시판의 UI/UX를
+            설계하고 구현했습니다. 팀장으로 기획과 일정 관리를 맡아 결과보고서와 시연까지
+            마무리했습니다.
+          </p>
+          <div class="tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>jQuery</span><span>UI/UX</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry__when">개인 작업<br />현재 사용 중</div>
+        <div>
+          <h3>데스크톱 앱 6종 <span>기획 · UI · 개발 · 패키징</span></h3>
+          <p>
+            세이프 타이머, 나만의 메모, MiniCloud, Compact Vault, Audio Switcher,
+            강의 배속 타이머. 모두 1인 작업으로 만들었고, 지금도 매일 쓰고 있습니다. <a href="https://github.com/gyuyeonglee/python-apps" target="_blank" rel="noopener" style="border-bottom:1px solid var(--line)">소스 보기 ↗</a>
+          </p>
+          <div class="tags">
+            <span>Python</span><span>PySide6</span><span>Tkinter</span><span>SQLite</span><span>PyInstaller</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry__when">개인 작업<br />운영 중</div>
+        <div>
+          <h3>웹앱 2종 <span>드림타로 · 칼로리 사전</span></h3>
+          <p>
+            78장 타로 카드로 열세 가지 스프레드를 제공하는 ‘드림타로’(Firebase), 332가지
+            음식을 초성으로 찾는 ‘칼로리 사전’(바닐라 JS)을 만들어 운영하고 있습니다.
+          </p>
+          <div class="tags">
+            <span>JavaScript</span><span>Firebase</span><span>Capacitor</span><span>PWA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry__when">2024</div>
+        <div>
+          <h3>제품 디자인 · 인쇄물 <span>상세페이지 · POP · 백판</span></h3>
+          <p>
+            가전제품 거치대와 개별집기 구성, 홍보용 POP, 인쇄용 백판, 11번가 프로모션
+            상세페이지를 작업했습니다. 포트폴리오에서 원본 이미지를 볼 수 있습니다.
+          </p>
+          <div class="tags">
+            <span>Photoshop</span><span>Illustrator</span><span>인쇄</span><span>제품 이미지</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc__section">
+    <h2><span>04</span>교육</h2>
+    <div class="doc__body">
+      <div class="entry">
+        <div class="entry__when">2023.10 — 2024.04</div>
+        <div>
+          <h3>하이미디어컴퓨터학원 <span>E-커머스 개발자 양성과정 수료</span></h3>
+          <p>
+            JAVA와 AI/RPA/빅데이터를 활용한 E-커머스 개발자 양성 취업과정. Java·Spring·DB
+            중심의 백엔드 개발을 학습했고, RPA(UiPath·Brity)와 파이썬도 함께 다뤘습니다.
+          </p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="entry__when">2019.02 — 2019.08</div>
+        <div>
+          <h3>이젠아카데미컴퓨터학원 <span>웹표준기반 디지털디자인(웹&amp;앱)</span></h3>
+          <p>HTML·CSS·JavaScript·jQuery를 학습하며 웹 퍼블리싱의 기반을 다졌습니다.</p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="entry__when">2015</div>
+        <div>
+          <h3>성남방송고등학교 <span>졸업</span></h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc__section">
+    <h2><span>05</span>기술</h2>
+    <div class="doc__body">
+      <dl>
+        <div class="spec"><dt>Design</dt><dd>Photoshop · Illustrator · 상세페이지 · UI/UX · 제품 이미지 · 인쇄물</dd></div>
+        <div class="spec"><dt>Front-end</dt><dd>HTML · CSS · JavaScript · jQuery · 반응형 웹 · PWA</dd></div>
+        <div class="spec"><dt>Python</dt><dd>Tkinter · PySide6 · Pillow · PyMuPDF · SQLite · PyInstaller</dd></div>
+        <div class="spec"><dt>Back-end</dt><dd>Java · Spring Boot · SQL <span style="color:var(--dim)">(교육 과정 이수)</span></dd></div>
+        <div class="spec"><dt>Tools</dt><dd>Git · VS Code · Firebase · Vercel · Netlify · Capacitor</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="doc__section">
+    <h2><span>06</span>자격 · 기타</h2>
+    <div class="doc__body">
+      <dl>
+        <div class="spec"><dt>2017.11</dt><dd>GTQ 2급 — 한국생산성본부</dd></div>
+        <div class="spec"><dt>2019.04</dt><dd>2종 보통 운전면허 — 경찰청</dd></div>
+        <div class="spec"><dt>병역</dt><dd>군필 (제대)</dd></div>
+        <div class="spec"><dt>희망</dt><dd>정규직 · 서울 전지역 / 경기 성남시</dd></div>
+      </dl>
+      <p style="margin-top:16px">
+        포트폴리오 <a href="index.html" style="border-bottom:1px solid var(--line)">포트폴리오 사이트</a> ·
+        <a href="assets/docs/resume-2024.pdf" style="border-bottom:1px solid var(--line)">2024년 원본 이력서 PDF</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="doc__foot">
+    <span>이규영 · 웹디자이너</span>
+    <span>위 내용은 사실과 다름이 없습니다.</span>
+  </footer>
+</main>
+</body>
+</html>

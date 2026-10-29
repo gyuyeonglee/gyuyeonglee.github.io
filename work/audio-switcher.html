@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Audio Switcher — 이규영</title>
+<meta name="description" content="스피커와 헤드셋, 단축키 한 번으로." />
+<meta property="og:title" content="Audio Switcher — 이규영" />
+<meta property="og:description" content="스피커와 헤드셋, 단축키 한 번으로." />
+<meta name="theme-color" content="#f3eee6" />
+<meta property="og:image" content="https://gyuyeonglee.github.io/assets/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="stylesheet" href="../assets/css/style.css" />
+<noscript><style>[data-reveal]{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body class="paper">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<div class="grain" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="../index.html">이규영<span>Portfolio</span></a>
+    <nav class="nav__links" aria-label="주요 메뉴">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#design">Design</a>
+      <a href="../index.html#about">About</a>
+      <a href="../resume.html">Resume</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <a class="nav__cta" href="mailto:wlsduf631@gmail.com">wlsduf631@gmail.com</a>
+    <button class="nav__burger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="navpanel">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav__panel" id="navpanel">
+      <a href="../index.html#work">Work <span>01</span></a>
+      <a href="../index.html#design">Design <span>02</span></a>
+      <a href="../index.html#about">About <span>03</span></a>
+      <a href="../resume.html">Resume <span>04</span></a>
+      <a href="../index.html#contact">Contact <span>05</span></a>
+    </div>
+  </header>
+
+<main id="main">
+  <article>
+    <section class="phero">
+      <div class="phero__glow" style="background:linear-gradient(140deg, #1f6b35, #121212 72%)" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="phero__top">
+          <nav class="crumbs" aria-label="위치">
+            <a href="../index.html">Index</a><span>/</span>
+            <a href="../index.html#work">Work</a><span>/</span>
+            <span>Audio Switcher</span>
+          </nav>
+          <span class="phero__num">05 / 08</span>
+        </div>
+
+        <h1 class="phero__title">Audio Switcher</h1>
+        <p class="phero__tagline">스피커와 헤드셋, 단축키 한 번으로.</p>
+
+        <dl class="pmeta">
+          <div><dt>Role</dt><dd>기획 · 디자인 · 개발<br />(1인 작업)</dd></div>
+          <div><dt>Platform</dt><dd>Windows 데스크톱</dd></div>
+          <div><dt>Stack</dt><dd>Python · PySide6 · COM</dd></div>
+          <div><dt>Status</dt><dd>직접 사용 중</dd></div>
+        </dl>
+
+        <div class="pcover" style="--cover-grad:linear-gradient(140deg, #1f6b35, #121212 72%)" data-cover>
+        <div class="pcover__poster">
+          <div class="top"><span>Desktop App · Windows</span><span>05 / 08</span></div>
+          <div class="bottom">
+            <img src="../assets/icons/audio-switcher.png" width="56" height="56" alt="" style="margin-bottom:18px" />
+            <strong>Audio Switcher</strong>
+            <p>스피커와 헤드셋, 단축키 한 번으로.</p>
+          </div>
+          <span class="glyph" aria-hidden="true">AU</span>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pbody">
+      <div class="wrap">
+        <div class="pbody__grid">
+          <aside class="pbody__aside">
+            <p class="mono">Overview</p>
+            <h2>듣는 곳을<br />바꿉니다.</h2>
+            <a class="plink" href="../index.html#work">Work index ↗</a>
+          </aside>
+
+          <div class="pbody__main">
+          <p>출력 장치 두 개를 등록해 두고 버튼·전역 단축키·트레이 클릭으로 즉시 바꿉니다. 기본 장치뿐 아니라 통신 장치까지 함께 전환해서, 화상회의와 게임을 오갈 때 설정 창을 열 필요가 없습니다.</p>
+          <p>Windows 시작 시 자동 실행되고 평소에는 트레이에 숨어 있습니다. 전환할 때는 자체 토스트로 알려 주며, 이 알림은 방해 금지 모드의 영향을 받지 않습니다.</p>
+
+
+            <div class="pblock">
+              <div class="pblock__head">
+                <h3>주요 기능</h3>
+                <span class="mono">Features</span>
+              </div>
+              <ul class="feat">
+            <li><b>01</b><span>A↔B 원클릭 전환</span></li>
+            <li><b>02</b><span>Ctrl·Alt·Shift·Win 조합 단축키 — A~Z, 0~9, F1~F12</span></li>
+            <li><b>03</b><span>트레이 아이콘 좌클릭으로 즉시 전환</span></li>
+            <li><b>04</b><span>Windows 시작 시 자동 실행</span></li>
+            <li><b>05</b><span>자체 토스트 알림, 방해 금지 모드와 무관</span></li>
+            <li><b>06</b><span>설정 JSON 저장, 시작 시 트레이로 숨김</span></li>
+              </ul>
+            </div>
+
+            <div class="pblock">
+              <div class="pblock__head">
+                <h3>기술 노트</h3>
+                <span class="mono">Engineering</span>
+              </div>
+              <ul class="notes">
+            <li><span>01</span><p>공개되지 않은 IPolicyConfig 인터페이스를 vtable 순서까지 선언해, 콘솔·멀티미디어·통신 세 역할을 동시에 바꿉니다.</p></li>
+            <li><span>02</span><p>전환 후 실제 기본 장치를 다시 조회해 적용 여부를 검증합니다.</p></li>
+            <li><span>03</span><p>WM_HOTKEY를 Qt 네이티브 이벤트 필터로 처리하고 MOD_NOREPEAT로 키 반복을 막았습니다.</p></li>
+              </ul>
+            </div>
+
+            <div class="pblock">
+              <div class="pblock__head">
+                <h3>사용 기술</h3>
+                <span class="mono">Stack</span>
+              </div>
+              <ul class="techlist">
+            <li>Python</li>
+            <li>PySide6</li>
+            <li>pycaw</li>
+            <li>comtypes</li>
+            <li>winreg</li>
+            <li>PyInstaller</li>
+              </ul>
+            </div>
+
+            <div class="pblock">
+              <div class="pblock__head">
+                <h3>컬러</h3>
+                <span class="mono">Palette</span>
+              </div>
+              <div class="palette">
+            <span style="background:#2E7D32" data-hex="#2E7D32"></span>
+            <span style="background:#1E1E1E" data-hex="#1E1E1E"></span>
+            <span style="background:#FFFFFF" data-hex="#FFFFFF"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="pnext" aria-label="다음 프로젝트">
+      <div class="wrap">
+        <a href="lecture-timer.html">
+          <div>
+            <span class="mono">Next project — 06 / 08</span>
+            <h3>강의 배속 타이머</h3>
+          </div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </nav>
+  </article>
+</main>
+
+<footer class="footer wrap" style="margin-top:0;padding:26px var(--pad) 34px">
+  <span>© 2026 이규영</span>
+  <a href="mailto:wlsduf631@gmail.com">wlsduf631@gmail.com</a>
+  <a href="../index.html">Back to index ↑</a>
+</footer>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

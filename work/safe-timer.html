@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>세이프 타이머 — 이규영</title>
+<meta name="description" content="60초, 그 한 순간을 위한 오버레이 타이머." />
+<meta property="og:title" content="세이프 타이머 — 이규영" />
+<meta property="og:description" content="60초, 그 한 순간을 위한 오버레이 타이머." />
+<meta name="theme-color" content="#f3eee6" />
+<meta property="og:image" content="https://gyuyeonglee.github.io/assets/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="stylesheet" href="../assets/css/style.css" />
+<noscript><style>[data-reveal]{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body class="paper">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<div class="grain" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="../index.html">이규영<span>Portfolio</span></a>
+    <nav class="nav__links" aria-label="주요 메뉴">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#design">Design</a>
+      <a href="../index.html#about">About</a>
+      <a href="../resume.html">Resume</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <a class="nav__cta" href="mailto:wlsduf631@gmail.com">wlsduf631@gmail.com</a>
+    <button class="nav__burger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="navpanel">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav__panel" id="navpanel">
+      <a href="../index.html#work">Work <span>01</span></a>
+      <a href="../index.html#design">Design <span>02</span></a>
+      <a href="../index.html#about">About <span>03</span></a>
+      <a href="../resume.html">Resume <span>04</span></a>
+      <a href="../index.html#contact">Contact <span>05</span></a>
+    </div>
+  </header>
+
+<main id="main">
+  <article>
+    <section class="phero">
+      <div class="phero__glow" style="background:radial-gradient(120% 120% at 20% 0%, #5a1818, #121212 70%)" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="phero__top">
+          <nav class="crumbs" aria-label="위치">
+            <a href="../index.html">Index</a><span>/</span>
+            <a href="../index.html#work">Work</a><span>/</span>
+            <span>세이프 타이머</span>
+          </nav>
+          <span class="phero__num">01 / 08</span>
+        </div>
+
+        <h1 class="phero__title">세이프 타이머</h1>
+        <p class="phero__tagline">60초, 그 한 순간을 위한 오버레이 타이머.</p>
+
+        <dl class="pmeta">
+          <div><dt>Role</dt><dd>기획 · 디자인 · 개발<br />(1인 작업)</dd></div>
+          <div><dt>Platform</dt><dd>Windows 데스크톱</dd></div>
+          <div><dt>Stack</dt><dd>Python · Tkinter</dd></div>
+          <div><dt>Status</dt><dd>직접 사용 중</dd></div>
+        </dl>
+
+        <div class="pcover" style="--cover-grad:radial-gradient(120% 120% at 20% 0%, #5a1818, #121212 70%)" data-cover>
+        <div class="pcover__window">
+          <div class="pcover__bar"><i></i><i></i><i></i><span>세이프 타이머</span></div>
+          <img src="../assets/shots/safe-timer.png" alt="세이프 타이머 실행 화면" />
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pbody">
+      <div class="wrap">
+        <div class="pbody__grid">
+          <aside class="pbody__aside">
+            <p class="mono">Overview</p>
+            <h2>게임 화면 위,<br />60초.</h2>
+            <a class="plink" href="../index.html#work">Work index ↗</a>
+          </aside>
+
+          <div class="pbody__main">
+          <p>게임 ‘데드바이 데이라이트’에는 60초 동안 지속되는 생존자 스킬이 있습니다. 그 시간 안에 생존자를 들어 올리면 역으로 큰 위기를 맞기 때문에, 언제까지 기다려야 하는지가 중요합니다.</p>
+          <p>세이프 타이머는 이 60초를 재는 오버레이 타이머입니다. 게임 창 위에 항상 떠 있고, Z키 하나로 시작하고 멈춥니다. 창을 숨기면 트레이 아이콘으로만 남아 플레이를 방해하지 않습니다.</p>
+
+
+            <div class="pblock">
+              <div class="pblock__head">
+                <h3>주요 기능</h3>
+                <span class="mono">Features</span>
+              </div>
+              <ul class="feat">
+            <li><b>01</b><span>60초 카운트다운, 15초 이하부터 위험 색상(#990000)으로 전환</span></li>
+            <li><b>02</b><span>Z키 전역 감지 — 게임 중에도 시작·정지, 키 입력은 가로채지 않음</span></li>
+            <li><b>03</b><span>Z키 기능 ON/OFF 버튼과 트레이 메뉴 연동</span></li>
+            <li><b>04</b><span>창 숨김 → 트레이 아이콘, 필요할 때만 꺼내 쓰는 구조</span></li>
+            <li><b>05</b><span>드래그로 옮긴 위치 저장, 모니터를 바꿔도 화면 밖으로 나가지 않음</span></li>
+            <li><b>06</b><span>종료 시 ‘SAFE!’ 표시와 비프음 3회</span></li>
+              </ul>
+            </div>
+
+            <div class="pblock">
+              <div class="pblock__head">
+                <h3>기술 노트</h3>
+                <span class="mono">Engineering</span>
+              </div>
+              <ul class="notes">
+            <li><span>01</span><p>GetAsyncKeyState를 20ms 간격으로 폴링해, 게임 클라이언트의 입력을 빼앗지 않으면서 전역 키를 감지했습니다.</p></li>
+            <li><span>02</span><p>CreateMutexW로 중복 실행을 막고, GetSystemMetrics(76~79)로 가상 화면 영역을 확인해 창 위치를 복원합니다.</p></li>
+            <li><span>03</span><p>PyInstaller로 콘솔 창 없는 실행 파일을 만들고, 설정은 %APPDATA%에 JSON으로 저장했습니다.</p></li>
+              </ul>
+            </div>
+
+            <div class="pblock">
+              <div class="pblock__head">
+                <h3>사용 기술</h3>
+                <span class="mono">Stack</span>
+              </div>
+              <ul class="techlist">
+            <li>Python</li>
+            <li>Tkinter</li>
+            <li>pystray</li>
+            <li>Pillow</li>
+            <li>ctypes</li>
+            <li>winsound</li>
+            <li>PyInstaller</li>
+              </ul>
+            </div>
+
+            <div class="pblock">
+              <div class="pblock__head">
+                <h3>컬러</h3>
+                <span class="mono">Palette</span>
+              </div>
+              <div class="palette">
+            <span style="background:#121212" data-hex="#121212"></span>
+            <span style="background:#1A1A1A" data-hex="#1A1A1A"></span>
+            <span style="background:#5A1818" data-hex="#5A1818"></span>
+            <span style="background:#990000" data-hex="#990000"></span>
+            <span style="background:#19381F" data-hex="#19381F"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="pnext" aria-label="다음 프로젝트">
+      <div class="wrap">
+        <a href="my-memo.html">
+          <div>
+            <span class="mono">Next project — 02 / 08</span>
+            <h3>나만의 메모</h3>
+          </div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </nav>
+  </article>
+</main>
+
+<footer class="footer wrap" style="margin-top:0;padding:26px var(--pad) 34px">
+  <span>© 2026 이규영</span>
+  <a href="mailto:wlsduf631@gmail.com">wlsduf631@gmail.com</a>
+  <a href="../index.html">Back to index ↑</a>
+</footer>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

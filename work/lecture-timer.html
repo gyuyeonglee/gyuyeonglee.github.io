@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>강의 배속 타이머 — 이규영</title>
+<meta name="description" content="2배속 강의가 끝나는 시각을 미리 알려주는 타이머." />
+<meta property="og:title" content="강의 배속 타이머 — 이규영" />
+<meta property="og:description" content="2배속 강의가 끝나는 시각을 미리 알려주는 타이머." />
+<meta name="theme-color" content="#f3eee6" />
+<meta property="og:image" content="https://gyuyeonglee.github.io/assets/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="stylesheet" href="../assets/css/style.css" />
+<noscript><style>[data-reveal]{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body class="paper">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<div class="grain" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="../index.html">이규영<span>Portfolio</span></a>
+    <nav class="nav__links" aria-label="주요 메뉴">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#design">Design</a>
+      <a href="../index.html#about">About</a>
+      <a href="../resume.html">Resume</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <a class="nav__cta" href="mailto:wlsduf631@gmail.com">wlsduf631@gmail.com</a>
+    <button class="nav__burger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="navpanel">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav__panel" id="navpanel">
+      <a href="../index.html#work">Work <span>01</span></a>
+      <a href="../index.html#design">Design <span>02</span></a>
+      <a href="../index.html#about">About <span>03</span></a>
+      <a href="../resume.html">Resume <span>04</span></a>
+      <a href="../index.html#contact">Contact <span>05</span></a>
+    </div>
+  </header>
+
+<main id="main">
+  <article>
+    <section class="phero">
+      <div class="phero__glow" style="background:linear-gradient(140deg, #1f3a5a, #0f1216 72%)" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="phero__top">
+          <nav class="crumbs" aria-label="위치">
+            <a href="../index.html">Index</a><span>/</span>
+            <a href="../index.html#work">Work</a><span>/</span>
+            <span>강의 배속 타이머</span>
+          </nav>
+          <span class="phero__num">06 / 08</span>
+        </div>
+
+        <h1 class="phero__title">강의 배속 타이머</h1>
+        <p class="phero__tagline">2배속 강의가 끝나는 시각을 미리 알려주는 타이머.</p>
+
+        <dl class="pmeta">
+          <div><dt>Role</dt><dd>기획 · 디자인 · 개발<br />(1인 작업)</dd></div>
+          <div><dt>Platform</dt><dd>Windows 데스크톱</dd></div>
+          <div><dt>Stack</dt><dd>Python · Tkinter</dd></div>
+          <div><dt>Status</dt><dd>직접 사용 중</dd></div>
+        </dl>
+
+        <div class="pcover" style="--cover-grad:linear-gradient(140deg, #1f3a5a, #0f1216 72%)" data-cover>
+        <div class="pcover__window">
+          <div class="pcover__bar"><i></i><i></i><i></i><span>강의 배속 타이머</span></div>
+          <img src="../assets/shots/lecture-timer.png" alt="강의 배속 타이머 실행 화면" />
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pbody">
+      <div class="wrap">
+        <div class="pbody__grid">
+          <aside class="pbody__aside">
+            <p class="mono">Overview</p>
+            <h2>끝나는 시각을<br />미리 압니다.</h2>
+            <a class="plink" href="../index.html#work">Work index ↗</a>
+          </aside>
+
+          <div class="pbody__main">
+          <p>강의 총 재생시간과 배속을 입력하면 실제로 기다려야 하는 시간을 계산해 카운트다운합니다. 남은 시간과 함께 알람이 울릴 시각을 보여 주기 때문에 다음 일정을 잡기 쉽습니다.</p>
+          <p>Enter로 시작하고 멈추며, 알람이 울리면 창이 최전면으로 올라옵니다. 알람 10초 뒤에는 자동으로 종료됩니다.</p>
+
+
+            <div class="pblock">
+              <div class="pblock__head">
+                <h3>주요 기능</h3>
+                <span class="mono">Features</span>
+              </div>
+              <ul class="feat">
+            <li><b>01</b><span>시·분·초 + 1.0~3.0배속 입력</span></li>
+            <li><b>02</b><span>길이÷배속 자동 계산</span></li>
+            <li><b>03</b><span>남은 시간과 알람 예정 시각 동시 표시</span></li>
+            <li><b>04</b><span>Enter로 시작·정지, 알람 10초 후 자동 종료</span></li>
+            <li><b>05</b><span>알람 시 창을 최전면으로 호출</span></li>
+            <li><b>06</b><span>창 위치 저장·복원</span></li>
+              </ul>
+            </div>
+
+            <div class="pblock">
+              <div class="pblock__head">
+                <h3>기술 노트</h3>
+                <span class="mono">Engineering</span>
+              </div>
+              <ul class="notes">
+            <li><span>01</span><p>time.monotonic을 기준으로 계산해, 배속 재생 중에도 오차가 누적되지 않습니다.</p></li>
+            <li><span>02</span><p>CreateMutexW와 FindWindowW로 중복 실행을 감지하고, 이미 켜져 있으면 기존 창만 앞으로 불러옵니다.</p></li>
+            <li><span>03</span><p>숫자 입력을 세 자리로 제한하고, 포커스가 오면 전체 선택해 바로 덮어쓸 수 있게 했습니다.</p></li>
+              </ul>
+            </div>
+
+            <div class="pblock">
+              <div class="pblock__head">
+                <h3>사용 기술</h3>
+                <span class="mono">Stack</span>
+              </div>
+              <ul class="techlist">
+            <li>Python</li>
+            <li>Tkinter</li>
+            <li>threading</li>
+            <li>winsound</li>
+            <li>ctypes</li>
+            <li>PyInstaller</li>
+              </ul>
+            </div>
+
+            <div class="pblock">
+              <div class="pblock__head">
+                <h3>컬러</h3>
+                <span class="mono">Palette</span>
+              </div>
+              <div class="palette">
+            <span style="background:#1E1E1E" data-hex="#1E1E1E"></span>
+            <span style="background:#1F3A5A" data-hex="#1F3A5A"></span>
+            <span style="background:#1F4D2B" data-hex="#1F4D2B"></span>
+            <span style="background:#E8E8E8" data-hex="#E8E8E8"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="pnext" aria-label="다음 프로젝트">
+      <div class="wrap">
+        <a href="dream-tarot.html">
+          <div>
+            <span class="mono">Next project — 07 / 08</span>
+            <h3>드림타로</h3>
+          </div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </nav>
+  </article>
+</main>
+
+<footer class="footer wrap" style="margin-top:0;padding:26px var(--pad) 34px">
+  <span>© 2026 이규영</span>
+  <a href="mailto:wlsduf631@gmail.com">wlsduf631@gmail.com</a>
+  <a href="../index.html">Back to index ↑</a>
+</footer>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

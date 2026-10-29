@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>나만의 메모 — 이규영</title>
+<meta name="description" content="메모 한 줄이 곧 미션, 체크하면 사라지는 포스트잇." />
+<meta property="og:title" content="나만의 메모 — 이규영" />
+<meta property="og:description" content="메모 한 줄이 곧 미션, 체크하면 사라지는 포스트잇." />
+<meta name="theme-color" content="#f3eee6" />
+<meta property="og:image" content="https://gyuyeonglee.github.io/assets/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="stylesheet" href="../assets/css/style.css" />
+<noscript><style>[data-reveal]{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body class="paper">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<div class="grain" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="../index.html">이규영<span>Portfolio</span></a>
+    <nav class="nav__links" aria-label="주요 메뉴">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#design">Design</a>
+      <a href="../index.html#about">About</a>
+      <a href="../resume.html">Resume</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <a class="nav__cta" href="mailto:wlsduf631@gmail.com">wlsduf631@gmail.com</a>
+    <button class="nav__burger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="navpanel">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav__panel" id="navpanel">
+      <a href="../index.html#work">Work <span>01</span></a>
+      <a href="../index.html#design">Design <span>02</span></a>
+      <a href="../index.html#about">About <span>03</span></a>
+      <a href="../resume.html">Resume <span>04</span></a>
+      <a href="../index.html#contact">Contact <span>05</span></a>
+    </div>
+  </header>
+
+<main id="main">
+  <article>
+    <section class="phero">
+      <div class="phero__glow" style="background:linear-gradient(140deg, #ffe0b8, #ffd6e0 46%, #d4ecff)" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="phero__top">
+          <nav class="crumbs" aria-label="위치">
+            <a href="../index.html">Index</a><span>/</span>
+            <a href="../index.html#work">Work</a><span>/</span>
+            <span>나만의 메모</span>
+          </nav>
+          <span class="phero__num">02 / 08</span>
+        </div>
+
+        <h1 class="phero__title">나만의 메모</h1>
+        <p class="phero__tagline">메모 한 줄이 곧 미션, 체크하면 사라지는 포스트잇.</p>
+
+        <dl class="pmeta">
+          <div><dt>Role</dt><dd>기획 · 디자인 · 개발<br />(1인 작업)</dd></div>
+          <div><dt>Platform</dt><dd>Windows 데스크톱</dd></div>
+          <div><dt>Stack</dt><dd>Python · PySide6</dd></div>
+          <div><dt>Status</dt><dd>직접 사용 중</dd></div>
+        </dl>
+
+        <div class="pcover" style="--cover-grad:linear-gradient(140deg, #ffe0b8, #ffd6e0 46%, #d4ecff)" data-cover>
+        <div class="pcover__poster is-dark">
+          <div class="top"><span>Desktop App · PySide6</span><span>02 / 08</span></div>
+          <div class="bottom">
+            <img src="../assets/icons/my-memo.png" width="56" height="56" alt="" style="margin-bottom:18px" />
+            <strong>나만의 메모</strong>
+            <p>메모 한 줄이 곧 미션, 체크하면 사라지는 포스트잇.</p>
+          </div>
+          <span class="glyph" aria-hidden="true">메모</span>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pbody">
+      <div class="wrap">
+        <div class="pbody__grid">
+          <aside class="pbody__aside">
+            <p class="mono">Overview</p>
+            <h2>한 줄이<br />미션이 됩니다.</h2>
+            <a class="plink" href="../index.html#work">Work index ↗</a>
+          </aside>
+
+          <div class="pbody__main">
+          <p>메모 하나가 창 하나인 데스크톱 포스트잇입니다. 할 일을 적어 두고 끝난 줄을 체크하면, 그 줄은 ‘해결한 미션’ 창으로 옮겨집니다. 지운 것이 아니라 옮긴 것이라 필요하면 원래 자리로 되돌릴 수 있습니다.</p>
+          <p>메모지 일곱 색과 여덟 가지 글자색, 항상 위 고정, 글자 크기와 정렬을 지원합니다. 내용과 서식, 창 위치와 크기는 입력이 멈추면 자동으로 저장됩니다.</p>
+
+
+            <div class="pblock">
+              <div class="pblock__head">
+                <h3>주요 기능</h3>
+                <span class="mono">Features</span>
+              </div>
+              <ul class="feat">
+            <li><b>01</b><span>메모마다 독립된 창, 겹치지 않게 자동 배치</span></li>
+            <li><b>02</b><span>줄 단위 미션 토글 — Ctrl+M · 🎯 버튼 · 우클릭</span></li>
+            <li><b>03</b><span>해결한 미션 되돌리기 · 선택 삭제 · 전체 삭제</span></li>
+            <li><b>04</b><span>메모지 7색 · 항상 위 고정 · 굵게 · 크기 · 정렬 · 글자색 8종</span></li>
+            <li><b>05</b><span>내용·서식(HTML)·위치·크기를 400ms 디바운스로 자동 저장</span></li>
+            <li><b>06</b><span>중복 실행 시 기존 메모를 앞으로 불러오고 깜빡임</span></li>
+              </ul>
+            </div>
+
+            <div class="pblock">
+              <div class="pblock__head">
+                <h3>기술 노트</h3>
+                <span class="mono">Engineering</span>
+              </div>
+              <ul class="notes">
+            <li><span>01</span><p>체크박스를 별도 위젯 없이 거터에 직접 그려, 줄 높이와 어긋나지 않게 맞췄습니다.</p></li>
+            <li><span>02</span><p>줄 상태를 blockFormat 사용자 속성에 보관해, 복사·붙여넣기 후에도 그대로 유지됩니다.</p></li>
+            <li><span>03</span><p>한글 IME 조합 중 플레이스홀더 잔상이 남는 문제를 inputMethodEvent 처리로 해결했습니다.</p></li>
+              </ul>
+            </div>
+
+            <div class="pblock">
+              <div class="pblock__head">
+                <h3>사용 기술</h3>
+                <span class="mono">Stack</span>
+              </div>
+              <ul class="techlist">
+            <li>Python</li>
+            <li>PySide6</li>
+            <li>QTextEdit</li>
+            <li>QLocalServer</li>
+            <li>ctypes</li>
+            <li>PyInstaller</li>
+              </ul>
+            </div>
+
+            <div class="pblock">
+              <div class="pblock__head">
+                <h3>컬러</h3>
+                <span class="mono">Palette</span>
+              </div>
+              <div class="palette">
+            <span style="background:#FFF4A3" data-hex="#FFF4A3"></span>
+            <span style="background:#FFD6E0" data-hex="#FFD6E0"></span>
+            <span style="background:#D4ECFF" data-hex="#D4ECFF"></span>
+            <span style="background:#D8F5C9" data-hex="#D8F5C9"></span>
+            <span style="background:#E6D9FF" data-hex="#E6D9FF"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="pnext" aria-label="다음 프로젝트">
+      <div class="wrap">
+        <a href="mini-cloud.html">
+          <div>
+            <span class="mono">Next project — 03 / 08</span>
+            <h3>MiniCloud</h3>
+          </div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </nav>
+  </article>
+</main>
+
+<footer class="footer wrap" style="margin-top:0;padding:26px var(--pad) 34px">
+  <span>© 2026 이규영</span>
+  <a href="mailto:wlsduf631@gmail.com">wlsduf631@gmail.com</a>
+  <a href="../index.html">Back to index ↑</a>
+</footer>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

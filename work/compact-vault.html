@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Compact Vault — 이규영</title>
+<meta name="description" content="마스터 비밀번호 하나로, 계정은 AES-256으로 로컬에만." />
+<meta property="og:title" content="Compact Vault — 이규영" />
+<meta property="og:description" content="마스터 비밀번호 하나로, 계정은 AES-256으로 로컬에만." />
+<meta name="theme-color" content="#f3eee6" />
+<meta property="og:image" content="https://gyuyeonglee.github.io/assets/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="stylesheet" href="../assets/css/style.css" />
+<noscript><style>[data-reveal]{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body class="paper">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<div class="grain" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="../index.html">이규영<span>Portfolio</span></a>
+    <nav class="nav__links" aria-label="주요 메뉴">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#design">Design</a>
+      <a href="../index.html#about">About</a>
+      <a href="../resume.html">Resume</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <a class="nav__cta" href="mailto:wlsduf631@gmail.com">wlsduf631@gmail.com</a>
+    <button class="nav__burger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="navpanel">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav__panel" id="navpanel">
+      <a href="../index.html#work">Work <span>01</span></a>
+      <a href="../index.html#design">Design <span>02</span></a>
+      <a href="../index.html#about">About <span>03</span></a>
+      <a href="../resume.html">Resume <span>04</span></a>
+      <a href="../index.html#contact">Contact <span>05</span></a>
+    </div>
+  </header>
+
+<main id="main">
+  <article>
+    <section class="phero">
+      <div class="phero__glow" style="background:linear-gradient(140deg, #3157d5, #172033)" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="phero__top">
+          <nav class="crumbs" aria-label="위치">
+            <a href="../index.html">Index</a><span>/</span>
+            <a href="../index.html#work">Work</a><span>/</span>
+            <span>Compact Vault</span>
+          </nav>
+          <span class="phero__num">04 / 08</span>
+        </div>
+
+        <h1 class="phero__title">Compact Vault</h1>
+        <p class="phero__tagline">마스터 비밀번호 하나로, 계정은 AES-256으로 로컬에만.</p>
+
+        <dl class="pmeta">
+          <div><dt>Role</dt><dd>기획 · 디자인 · 개발<br />(1인 작업)</dd></div>
+          <div><dt>Platform</dt><dd>Windows 데스크톱</dd></div>
+          <div><dt>Stack</dt><dd>Python · PySide6 · Cryptography</dd></div>
+          <div><dt>Status</dt><dd>직접 사용 중</dd></div>
+        </dl>
+
+        <div class="pcover" style="--cover-grad:linear-gradient(140deg, #3157d5, #172033)" data-cover>
+        <div class="pcover__window">
+          <div class="pcover__bar"><i></i><i></i><i></i><span>Compact Vault — 비밀번호 보관함</span></div>
+          <img src="../assets/shots/compact-vault.png" alt="Compact Vault 실행 화면" />
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pbody">
+      <div class="wrap">
+        <div class="pbody__grid">
+          <aside class="pbody__aside">
+            <p class="mono">Overview</p>
+            <h2>서버 없이,<br />내 PC에만.</h2>
+            <a class="plink" href="../index.html#work">Work index ↗</a>
+          </aside>
+
+          <div class="pbody__main">
+          <p>계정을 암호화된 파일 하나에 보관하는 오프라인 비밀번호 관리자입니다. 서버도 클라우드도 없이 내 PC 안에서만 동작하고, 마스터 비밀번호를 모르면 파일을 열 수 없습니다.</p>
+          <p>5분 동안 쓰지 않으면 자동으로 잠기고 키를 폐기합니다. 아이디나 비밀번호를 복사하면 20초 뒤 클립보드에서 지워, 화면과 클립보드에 남는 시간을 모두 줄였습니다.</p>
+
+
+            <div class="pblock">
+              <div class="pblock__head">
+                <h3>주요 기능</h3>
+                <span class="mono">Features</span>
+              </div>
+              <ul class="feat">
+            <li><b>01</b><span>Argon2id + AES-256-GCM, 단일 .enc 파일</span></li>
+            <li><b>02</b><span>마스터 비밀번호 12자 이상, 변경 시 새 salt로 재암호화</span></li>
+            <li><b>03</b><span>5분 미사용 자동 잠금과 키 폐기</span></li>
+            <li><b>04</b><span>복사 후 20초 뒤 클립보드 자동 삭제</span></li>
+            <li><b>05</b><span>검색, 순서 변경</span></li>
+            <li><b>06</b><span>암호화 백업(.cvault) 내보내기 · 복원</span></li>
+              </ul>
+            </div>
+
+            <div class="pblock">
+              <div class="pblock__head">
+                <h3>기술 노트</h3>
+                <span class="mono">Engineering</span>
+              </div>
+              <ul class="notes">
+            <li><span>01</span><p>파일 헤더에 KDF 파라미터·salt·nonce를 기록하고, AAD로 헤더를 암호문에 묶어 변조를 막았습니다.</p></li>
+            <li><span>02</span><p>임시 파일에 쓴 뒤 fsync와 os.replace로 교체해, 저장 중 전원이 꺼져도 원본이 남습니다.</p></li>
+            <li><span>03</span><p>비밀번호 생성기는 문자 종류별 최소 1자를 보장한 뒤 SystemRandom으로 섞습니다.</p></li>
+              </ul>
+            </div>
+
+            <div class="pblock">
+              <div class="pblock__head">
+                <h3>사용 기술</h3>
+                <span class="mono">Stack</span>
+              </div>
+              <ul class="techlist">
+            <li>Python</li>
+            <li>PySide6</li>
+            <li>cryptography</li>
+            <li>argon2-cffi</li>
+            <li>PyInstaller</li>
+              </ul>
+            </div>
+
+            <div class="pblock">
+              <div class="pblock__head">
+                <h3>컬러</h3>
+                <span class="mono">Palette</span>
+              </div>
+              <div class="palette">
+            <span style="background:#F4F6FA" data-hex="#F4F6FA"></span>
+            <span style="background:#172033" data-hex="#172033"></span>
+            <span style="background:#3157D5" data-hex="#3157D5"></span>
+            <span style="background:#D0D5DD" data-hex="#D0D5DD"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="pnext" aria-label="다음 프로젝트">
+      <div class="wrap">
+        <a href="audio-switcher.html">
+          <div>
+            <span class="mono">Next project — 05 / 08</span>
+            <h3>Audio Switcher</h3>
+          </div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </nav>
+  </article>
+</main>
+
+<footer class="footer wrap" style="margin-top:0;padding:26px var(--pad) 34px">
+  <span>© 2026 이규영</span>
+  <a href="mailto:wlsduf631@gmail.com">wlsduf631@gmail.com</a>
+  <a href="../index.html">Back to index ↑</a>
+</footer>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
