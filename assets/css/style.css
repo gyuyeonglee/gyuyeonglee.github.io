@@ -2471,3 +2471,12 @@ ol {
 .work:focus-visible::after {
   transform: scaleY(1);
 }
+
+/* gallery note */
+.dnote {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--dim);
+  margin: 6px 0 4px;
+}
