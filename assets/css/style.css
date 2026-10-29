@@ -327,8 +327,9 @@ ol {
   max-width: var(--max);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
-  gap: 24px;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  column-gap: clamp(24px, 3vw, 44px);
   align-items: end;
   flex: 1;
   align-content: center;
@@ -2308,7 +2309,7 @@ ol {
   display: flex;
   flex-direction: column;
   align-self: end;
-  width: 100%;
+  width: clamp(300px, 34vw, 520px);
 }
 .hero__photo {
   position: relative;
