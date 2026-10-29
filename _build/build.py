@@ -253,6 +253,15 @@ P = [
     ),
 ]
 
+REPO = {
+    "safe-timer": "https://github.com/gyuyeonglee/python-apps/tree/main/safe-timer",
+    "my-memo": "https://github.com/gyuyeonglee/python-apps/tree/main/my-memo",
+    "mini-cloud": "https://github.com/gyuyeonglee/python-apps/tree/main/mini-cloud",
+    "compact-vault": "https://github.com/gyuyeonglee/python-apps/tree/main/compact-vault",
+    "audio-switcher": "https://github.com/gyuyeonglee/python-apps/tree/main/audio-switcher",
+    "lecture-timer": "https://github.com/gyuyeonglee/python-apps/tree/main/lecture-timer",
+}
+
 NAV = """  <header class="nav" id="nav">
     <a class="nav__brand" href="../index.html">이규영<span>Portfolio</span></a>
     <nav class="nav__links" aria-label="주요 메뉴">
@@ -313,10 +322,16 @@ def build_one(p, nxt):
     paras = "\n".join(f"          <p>{html.escape(t)}</p>" for t in p["intro"])
     aside = p["aside"].replace("\n", "<br />")
 
-    link_block = ""
+    cta = []
     if p["link"]:
-        link_block = f"""
-          <a class="plink" href="{p['link']}" target="_blank" rel="noopener">사이트 열기 ↗</a>"""
+        cta.append(
+            f'<a class="plink" href="{p["link"]}" target="_blank" rel="noopener">사이트 열기 ↗</a>'
+        )
+    if REPO.get(p["id"]):
+        cta.append(
+            f'<a class="plink" href="{REPO[p["id"]]}" target="_blank" rel="noopener">GitHub 소스 ↗</a>'
+        )
+    link_block = ('\n          <div class="plinks">' + "".join(cta) + "</div>") if cta else ""
 
     return f"""<!DOCTYPE html>
 <html lang="ko">
