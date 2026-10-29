@@ -327,8 +327,8 @@ ol {
   max-width: var(--max);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
-  gap: 48px;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+  gap: 24px;
   align-items: end;
   flex: 1;
   align-content: center;
@@ -353,7 +353,7 @@ ol {
   animation: pulse 2.4s infinite;
 }
 .hero__title {
-  font-size: clamp(3.2rem, 8.6vw, 9.4rem);
+  font-size: clamp(3.2rem, 9.4vw, 10.2rem);
   line-height: 1.02;
   letter-spacing: -0.045em;
   font-weight: 800;
@@ -2329,13 +2329,31 @@ ol {
   display: block;
   width: 100%;
   aspect-ratio: 4 / 5;
+  max-height: 64vh;
   object-fit: cover;
   object-position: 50% 18%;
   border: 1px solid var(--line);
   background: var(--surface);
   filter: saturate(0.96) contrast(1.02);
+  animation: photoIn 1.2s var(--ease) 0.45s both;
+}
+@keyframes photoIn {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+    transform: translateX(-24px) scale(1.02);
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+    transform: none;
+  }
 }
 .hero__side-meta {
+  animation: fadeUp 0.9s var(--ease) 1s both;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
