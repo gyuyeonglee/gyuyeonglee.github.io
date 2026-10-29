@@ -2444,3 +2444,30 @@ ol {
 .plinks .plink {
   margin-top: 0;
 }
+
+/* work row hover: project colour bar */
+.work::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--pad) * -0.5);
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--grad, var(--accent));
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.55s var(--ease);
+  pointer-events: none;
+}
+.work:hover::after {
+  transform: scaleY(1);
+}
+.work__no {
+  transition: color 0.3s;
+}
+.work:hover .work__no {
+  color: var(--accent);
+}
+.work:focus-visible::after {
+  transform: scaleY(1);
+}

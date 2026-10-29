@@ -121,52 +121,10 @@
     });
   });
 
-  /* ---------- work: cursor-follow preview ---------- */
-  const preview = $("[data-preview]");
-  if (preview && fine && !reduce) {
-    const poster = $(".preview__poster", preview);
-    const pLabel = $("[data-preview-label]", preview);
-    const pTitle = $("[data-preview-title]", preview);
-    const pNum = $("[data-preview-num]", preview);
-    let tx = 0,
-      ty = 0,
-      cx = 0,
-      cy = 0,
-      active = false;
-
-    const move = (e) => {
-      tx = e.clientX;
-      ty = e.clientY;
-    };
-    window.addEventListener("pointermove", move, { passive: true });
-
-    const render = () => {
-      cx += (tx - cx) * 0.14;
-      cy += (ty - cy) * 0.14;
-      preview.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
-      requestAnimationFrame(render);
-    };
-
-    $$(".work").forEach((row) => {
-      row.addEventListener("pointerenter", (e) => {
-        if (!active) {
-          cx = e.clientX;
-          cy = e.clientY;
-          active = true;
-          requestAnimationFrame(render);
-        }
-        pLabel.textContent = row.dataset.label || "";
-        pTitle.textContent = row.dataset.title || "";
-        pNum.textContent = row.dataset.num || "";
-        poster.style.background = row.dataset.grad || "#1a1a1e";
-        poster.classList.toggle("is-dark", row.dataset.ink === "dark");
-        preview.classList.add("is-on");
-      });
-      row.addEventListener("pointerleave", () => {
-        preview.classList.remove("is-on");
-      });
-    });
-  }
+  /* ---------- work: project colour bar ---------- */
+  $$(".work").forEach((row) => {
+    if (row.dataset.grad) row.style.setProperty("--grad", row.dataset.grad);
+  });
 
   /* ---------- detail page: subtle parallax on cover ---------- */
   const cover = $("[data-cover]");
