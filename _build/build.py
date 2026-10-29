@@ -219,7 +219,7 @@ P = [
         ],
         tech=["HTML", "CSS", "JavaScript", "Firebase Auth", "Firestore", "DeepSeek API", "Capacitor", "PWA"],
         palette=["#FDF3F9", "#C76A9E", "#9A7FC9", "#F7B8D3", "#5A4A6E"],
-        link=None,
+        link="https://tarot-fortune-5a6d3.web.app",
     ),
     dict(
         id="calorie-dict", num="08", title="칼로리 사전", en="Calorie Dict",
@@ -328,7 +328,7 @@ def build_one(p, nxt):
 <meta property="og:title" content="{p['title']} — 이규영" />
 <meta property="og:description" content="{p['tagline']}" />
 <meta name="theme-color" content="#f3eee6" />
-<meta property="og:image" content="../assets/og.jpg" />
+<meta property="og:image" content="https://gyuyeonglee.github.io/assets/og.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />

@@ -88,10 +88,11 @@ python _build\design.py
 
 ## 5. 배포 (GitHub Pages)
 
-이 사이트는 **https://gyuyeonglee.github.io** 기준으로 OG 이미지 주소까지 맞춰져 있습니다.
+포트폴리오는 개인 사이트라 **GitHub Pages**를 씁니다. 주소는 **https://gyuyeonglee.github.io** 이고,
+OG 이미지 주소도 여기에 맞춰져 있습니다. `.nojekyll` 포함.
 
 1. GitHub에서 `gyuyeonglee.github.io` 저장소 생성 (Public, README 추가 없이)
-2. `portfolio/` 폴더에서 아래 실행
+2. `portfolio/` 폴더에서 실행
    ```bash
    git init
    git add .
@@ -100,14 +101,23 @@ python _build\design.py
    git remote add origin https://github.com/gyuyeonglee/gyuyeonglee.github.io.git
    git push -u origin main
    ```
-3. 저장소 Settings → Pages → Source: `Deploy from a branch`, Branch `main` / `(root)` → Save
-4. 1분 뒤 https://gyuyeonglee.github.io 접속
+3. Settings → Pages → Source: `Deploy from a branch`, Branch `main` / `(root)` → Save
+4. 1분 뒤 https://gyuyeonglee.github.io
 
-> 다른 이름의 저장소에 올리면 주소가 `https://아이디.github.io/저장소/`가 됩니다.
-> 그때는 각 페이지의 `og:image`와 이 문서의 URL을 그 주소로 바꿔주세요.
->
-> Netlify는 계정 크레딧이 소진되면 배포가 차단됩니다(실제로 이 계정에서 확인됨).
-> Vercel·Firebase Hosting도 같은 폴더를 그대로 올릴 수 있습니다.
+> 저장소 이름이 `gyuyeonglee.github.io`가 아니면 주소가 `https://아이디.github.io/저장소명/`이 됩니다.
+> 그때는 각 페이지의 `og:image`와 이 문서의 주소를 그에 맞게 바꿔주세요.
+
+### 상업 사이트는 GitHub Pages를 쓰면 안 됩니다
+
+GitHub 약관상 Pages는 *"online business, e-commerce site, or any other website that is primarily
+directed at either facilitating commercial transactions"* 용도로 사용할 수 없습니다.
+([GitHub Pages limits](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits))
+
+- 드림타로·칼로리 사전처럼 결제·구독이 붙는 사이트 → **Firebase Hosting** 유지
+- 결제 승인·웹훅 검증에는 서버가 필요하므로, 실제 결제를 켤 때 Firebase **Blaze** 플랜으로 전환
+- 정적 호스팅 비용을 줄이고 싶다면 Cloudflare Pages(상업 이용 허용)도 대안
+
+> Netlify는 이 계정에서 크레딧 소진으로 배포가 차단된 상태입니다.
 
 ## 6. 참고
 

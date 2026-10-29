@@ -167,7 +167,7 @@ def page(p, nxt):
 <meta property="og:title" content="{p['title']} — 이규영" />
 <meta property="og:description" content="{p['tagline']}" />
 <meta name="theme-color" content="#f3eee6" />
-<meta property="og:image" content="../assets/og.jpg" />
+<meta property="og:image" content="https://gyuyeonglee.github.io/assets/og.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
