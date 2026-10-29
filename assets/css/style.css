@@ -327,8 +327,8 @@ ol {
   max-width: var(--max);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(250px, 330px);
-  gap: 40px;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
+  gap: 48px;
   align-items: end;
   flex: 1;
   align-content: center;
