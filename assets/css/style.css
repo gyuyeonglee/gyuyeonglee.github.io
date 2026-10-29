@@ -2336,7 +2336,9 @@ ol {
   border: 1px solid var(--line);
   background: var(--surface);
   filter: saturate(0.96) contrast(1.02);
-  animation: photoIn 1.2s var(--ease) 0.45s both;
+  clip-path: inset(0 0 0 0);
+  will-change: clip-path, opacity, transform;
+  animation: photoIn 1.6s var(--ease) 0.5s both;
 }
 @keyframes photoIn {
   0% {
@@ -2354,7 +2356,7 @@ ol {
   }
 }
 .hero__side-meta {
-  animation: fadeUp 0.9s var(--ease) 1s both;
+  animation: fadeUp 0.9s var(--ease) 1.75s both;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -2479,4 +2481,15 @@ ol {
   letter-spacing: 0.04em;
   color: var(--dim);
   margin: 6px 0 4px;
+}
+
+/* hero bracket fades in with the photo */
+.hero__photo::before {
+  opacity: 0;
+  animation: bracketIn 0.8s var(--ease) 0.7s forwards;
+}
+@keyframes bracketIn {
+  to {
+    opacity: 1;
+  }
 }
